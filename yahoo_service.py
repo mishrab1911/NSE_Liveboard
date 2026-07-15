@@ -1,5 +1,6 @@
 import yfinance as yf
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 class YahooFinanceService:
@@ -17,7 +18,7 @@ class YahooFinanceService:
         min_price = float(info["Low"].min())
         max_price = float(info["High"].max())
 
-        now = datetime.now()
+        now = datetime.now(ZoneInfo("Asia/Kolkata"))
 
         return {
             "company_name": company_name,
