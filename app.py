@@ -635,3 +635,34 @@ with row2_col2:
             "Records",
             len(df_hist)
         )
+
+
+# Scheduler
+
+
+import streamlit as st
+import threading
+import time
+
+from scheduler import run_scheduler_once
+
+def scheduler_loop():
+    while True:
+        try:
+            run_scheduler_once()
+            print("Data Updated")
+        except Exception as e:
+            print(e)
+
+        time.sleep(3)
+
+if "scheduler_started" not in st.session_state:
+    threading.Thread(
+        target=scheduler_loop,
+        daemon=True
+    ).start()
+
+    st.session_state.scheduler_started = True
+
+st.title("NSE Liveboard")
+st.write("Scheduler running every 3 seconds")
