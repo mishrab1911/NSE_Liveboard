@@ -1,0 +1,145 @@
+/* ===================================================
+   PAGE LAYOUT
+=================================================== */
+
+.block-container{
+    padding-top:0rem !important;
+    padding-bottom:10rem !important;
+    max-width:98%;
+}
+
+div[data-testid="stVerticalBlock"]{
+    gap:0rem;
+}
+
+[data-testid="column"]{
+    padding-top:0rem !important;
+}
+
+h1{
+    margin-top:2rem !important;
+    margin-bottom:0rem !important;
+}
+
+h3{
+    margin-top:0rem !important;
+    margin-bottom:0rem !important;
+}
+
+/* ===================================================
+   LIVE INDICATOR
+=================================================== */
+
+.live-blink{
+    color:#00ff00;
+    font-size:32px;
+    font-weight:bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+/* ===================================================
+   KPI CARDS
+=================================================== */
+
+.metric-card{
+    background:#071633;
+    border:1px solid #223b67;
+    border-radius:10px;
+    text-align:center;
+    padding:10px;
+}
+
+.metric-title{
+    color:#FFD700;
+    font-size:33px;
+    font-weight:bold;
+}
+
+.metric-value{
+    color:white;
+    font-size:38px;
+    font-weight:bold;
+}
+
+/* ===================================================
+   STREAMLIT METRIC
+=================================================== */
+
+[data-testid="metric-container"]{
+    background:#071633;
+    border:1px solid #223b67;
+    border-radius:10px;
+}
+
+/* ===================================================
+   PLOTLY
+=================================================== */
+
+.js-plotly-plot{
+    border-radius:10px;
+}
+
+/* ===================================================
+   SELECTBOX LABELS
+=================================================== */
+
+label[data-testid="stWidgetLabel"] p{
+    font-size:28px !important;
+    font-weight:700 !important;
+    color:#004cff !important;
+}
+
+/* ===================================================
+   SELECTBOX HEIGHT
+=================================================== */
+
+div[data-baseweb="select"]{
+    min-height:65px !important;
+}
+
+/* ===================================================
+   DROPDOWN OPTIONS LIST
+=================================================== */
+
+div[role="option"]{
+    font-size:2rem !important;
+    font-weight:600 !important;
+}
+
+/* ===================================================
+   DROPDOWN MENU ITEMS
+=================================================== */
+
+ul[role="listbox"] li{
+    font-size:2rem !important;
+    font-weight:600 !important;
+}
+
+/* Selected value inside selectbox */
+
+.stSelectbox input {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: #1f2937 !important;
+}
+
+/* Height of selectbox */
+
+.stSelectbox input {
+    height: 35px !important;
+}
+
